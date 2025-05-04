@@ -67,7 +67,7 @@ cd /app
 npm install &>> $LOGFILE
     VALIDATE $? "npm install status"
 
-cp /home/ec2-user/shellscript/roboshop/cart.service /etc/systemd/system/cart.service &>> $LOGFILE
+cp //home/ec2-user/roboshop_shell/cart.service /etc/systemd/system/cart.service &>> $LOGFILE
     VALIDATE $? "File Copy Status"
 
 systemctl daemon-reload &>> $LOGFILE
