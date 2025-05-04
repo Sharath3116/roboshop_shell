@@ -76,7 +76,7 @@ systemctl enable catalogue &>> $LOGFILE
 systemctl start catalogue &>> $LOGFILE
     VALIDATE $? "Catalogue Service Start Status"
 
-cp //home/ec2-user/roboshop_shell/cmongo.repo /etc/yum.repos.d/mongo.repo &>> $LOGFILE
+cp /home/ec2-user/roboshop_shell/mongo.repo /etc/yum.repos.d/mongo.repo &>> $LOGFILE
     VALIDATE $? "CopCopying mongodb repo" 
 
 dnf install -y mongodb-mongosh  &>> $LOGFILE
