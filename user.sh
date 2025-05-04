@@ -83,7 +83,7 @@ systemctl enable user &>> $LOG_FILE
 systemctl start user &>> $LOG_FILE
     VALIDATE $? "user Service Start Status"
 
-cp /home/ec2-user/shellscript/roboshop/mongo.repo /etc/yum.repos.d/mongo.repo &>> $LOG_FILE
+cp /home/ec2-user/roboshop_shell/mongo.repo /etc/yum.repos.d/mongo.repo &>> $LOG_FILE
     VALIDATE $? "CopCopying mongodb repo" 
 
 dnf install mongodb-mongosh -y &>> $LOG_FILE
