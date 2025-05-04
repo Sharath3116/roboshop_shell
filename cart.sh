@@ -61,9 +61,6 @@ cd /app
 unzip /tmp/cart.zip &>> $LOGFILE
     VALIDATE $? "Package unzip status"
 
-cd /app
-    VALIDATE $? "Directory Entry"
-
 npm install &>> $LOGFILE
     VALIDATE $? "npm install status"
 
