@@ -71,7 +71,7 @@ cd /app
 npm install &>> $LOG_FILE
     VALIDATE $? "npm install status"
 
-cp home/ec2-user/roboshop_shell/cuser.service /etc/systemd/system/user.service &>> $LOG_FILE
+cp /home/ec2-user/roboshop_shell/user.service /etc/systemd/system/user.service &>> $LOG_FILE
     VALIDATE $? "File Copy Status"
 
 systemctl daemon-reload &>> $LOG_FILE
