@@ -49,7 +49,7 @@ curl -L -o /tmp/shipping.zip https://roboshop-builds.s3.amazonaws.com/shipping.z
 cd /app 
     VALIDATE $? "Directory Entry"
 
-unzip /tmp/shipping.zip &>> $LOGFILE
+unzip -o /tmp/shipping.zip &>> $LOGFILE
 VALIDATE $? "Extracting shipping application"
 
 mvn clean package &>> $LOGFILE
