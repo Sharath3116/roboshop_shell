@@ -28,14 +28,13 @@ else
     echo -e "Your running with $G root user $N"
 fi
 
-dnf install mysql -y &>> $LOGFILE
-
+yum install mysql -y &>> $LOGFILE
 VALIDATE $? "mysql installation"
 
 systemctl enable mysqld &>> $LOGFILE
 VALIDATE $? "enable mysqld"
 
-systemctl start mysql   &>> $LOGFILE
+systemctl start mysqld   &>> $LOGFILE
 VALIDATE $? "mysql service start"   
 
 mysql_secure_installation --set-root-pass RoboShop@1    &>> $LOGFILE

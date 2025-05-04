@@ -31,7 +31,7 @@ dnf install redis -y &>> $LOGFILE
 
 VALIDATE $? "Redis installation"
 
-sed -i 's/127.0.0.1/0.0.0.0/g' /ect/redis.redis.conf &>> $LOGFILE
+sed -i 's/127.0.0.1/0.0.0.0/g' /ect/redis/redis.conf &>> $LOGFILE
 
 VALIDATE $? "Verify Ports"
 
