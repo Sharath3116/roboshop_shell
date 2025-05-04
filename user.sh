@@ -89,5 +89,5 @@ cp /home/ec2-user/roboshop_shell/mongo.repo /etc/yum.repos.d/mongo.repo &>> $LOG
 dnf install mongodb-mongosh -y &>> $LOG_FILE
     VALIDATE $? "mongod shell install"
 
-mongo --host mongodb.olavu.in </app/schema/user.js &>> $LOG_FILE
+mongosh --host mongodb.olavu.in </app/schema/user.js &>> $LOG_FILE
      VALIDATE $? "Loading user data to MongoDB"
