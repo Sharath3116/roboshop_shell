@@ -55,7 +55,7 @@ VALIDATE $? "Maven build"
 mv target/shipping-1.0.jar shipping.jar &>> $LOGFILE
     VALIDATE $? "Package unzip status"
 
-cp /home/ec2-user/shellscript/roboshop/shipping.service /etc/systemd/system/shipping.service &>> $LOGFILE
+cp home/ec2-user/roboshop_shell/shipping.service /etc/systemd/system/shipping.service &>> $LOGFILE
     VALIDATE $? "File Copy Status"
 
 systemctl daemon-reload &>> $LOGFILE
