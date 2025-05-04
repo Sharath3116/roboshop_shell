@@ -28,7 +28,7 @@ else
     echo -e "Your running with $G root user $N"
 fi
 
-yum install mysql -y &>> $LOGFILE
+yum install mysql-server -y &>> $LOGFILE
 VALIDATE $? "mysql installation"
 
 systemctl enable mysqld &>> $LOGFILE
