@@ -49,9 +49,12 @@ curl -L -o /tmp/shipping.zip https://roboshop-builds.s3.amazonaws.com/shipping.z
 cd /app 
     VALIDATE $? "Directory Entry"
 
-mvn clean package &>> "$LOGFILE"
-VALIDATE $? "Maven build"
- 
+unzip /tmp/shipping.zip &>> $LOGFILE
+VALIDATE $? "Extracting shipping application"
+
+mvn clean package &>> $LOGFILE
+VALIDATE $? "Packaging shipping"
+
 mv target/shipping-1.0.jar shipping.jar &>> $LOGFILE
     VALIDATE $? "Package unzip status"
 
