@@ -64,7 +64,7 @@ cd /app
 npm install &>> $LOGFILE
     VALIDATE $? "npm install status"
 
-cp /home/ec2-user/shellscript/roboshop/catalogue.service /etc/systemd/system/catalogue.service &>> $LOGFILE
+cp //home/ec2-user/roboshop_shell/catalogue.service /etc/systemd/system/catalogue.service &>> $LOGFILE
     VALIDATE $? "File Copy Status"
 
 systemctl daemon-reload &>> $LOGFILE
@@ -76,7 +76,7 @@ systemctl enable catalogue &>> $LOGFILE
 systemctl start catalogue &>> $LOGFILE
     VALIDATE $? "Catalogue Service Start Status"
 
-cp /home/ec2-user/shellscript/roboshop/mongo.repo /etc/yum.repos.d/mongo.repo &>> $LOGFILE
+cp //home/ec2-user/roboshop_shell/cmongo.repo /etc/yum.repos.d/mongo.repo &>> $LOGFILE
     VALIDATE $? "CopCopying mongodb repo" 
 
 dnf install -y mongodb-mongosh  &>> $LOGFILE
